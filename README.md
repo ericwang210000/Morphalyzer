@@ -1,5 +1,10 @@
-# GANalyzer
-Detecting Synthetic Images Through File and Pixel Forensics
+# GANalyzer: Hybrid Classifier for AI-Generated Image Detection
+
+**GANalyzer** is a project designed to detect AI-generated images using a hybrid approach combining pixel-level CNN classifiers and file-level forensic features.
+
+## Project Goals
+
+Phase 1 focuses on building a binary image classifier using pixel data alone. The goal is to distinguish between real and AI-generated facial images (e.g., CelebA vs. ThisPersonDoesNotExist). Later phases will incorporate non-pixel features such as metadata and byte-level compression traces.
 
 # Data Sources & Preprocessing
 This project uses a balanced dataset of 20,000 images, comprising:
