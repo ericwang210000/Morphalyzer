@@ -4,11 +4,11 @@
 
 # Project Goals
 
-Phase 1 focuses on building a binary image classifier using pixel data. The goal is to distinguish between real and AI-generated facial images (e.g., CelebA vs. ThisPersonDoesNotExist). Later phases will incorporate non-pixel features such as metadata and byte-level compression traces. In this phase, pre-processed images will be used to train, validate and test (70/15/15) the model. Training will be done using the Adam optimizer with an inital learning rate of 0.001. This will act as the base architecture. 
+**Phase 1** focuses on building a binary image classifier using pixel data. The goal is to distinguish between real and AI-generated facial images (e.g., CelebA vs. ThisPersonDoesNotExist). Later phases will incorporate non-pixel features such as metadata and byte-level compression traces. In this phase, pre-processed images will be used to train, validate and test (70/15/15) the model. Training will be done using the Adam optimizer with an inital learning rate of 0.001. This will act as the base architecture. 
 
-Phase 2 will attempt to fuse CNN-derived feature maps with independent file-level features to improve classification robustness. Features like EXIF/tEXt metadata, entropy, compression artifacts, and byte frequency will be extracted and encoded into a fixed-length vector and injected into intermediate layers via skip connections (Mid-layer injection, DenseNet, Dual-branch network).
+**Phase 2** will attempt to fuse CNN-derived feature maps with independent file-level features to improve classification robustness. Features like EXIF/tEXt metadata, entropy, compression artifacts, and byte frequency will be extracted and encoded into a fixed-length vector and injected into intermediate layers via skip connections (Mid-layer injection, DenseNet, Dual-branch network).
 
-Phase 3 and 4 will interpret and validate the model's performance across multiple real-world conditions. Demo deployment for public use may be a good way to do so. Evaluation methods are tentative.
+**Phase 3 and 4** will interpret and validate the model's performance across multiple real-world conditions. Demo deployment for public use may be a good way to do so. Evaluation methods are tentative.
 
 ## Project Development Summary
 
