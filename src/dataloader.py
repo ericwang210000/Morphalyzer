@@ -1,6 +1,6 @@
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
-from config import IMAGE_SIZE, BATCH_SIZE
+from .config import IMAGE_SIZE, BATCH_SIZE
 
 def get_dataloaders(data_path, batch_size=32, image_size=IMAGE_SIZE):
     transform = transforms.Compose([
