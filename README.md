@@ -2,7 +2,7 @@
   <img src="assets/logo.png" alt="Logo" width="300"/>
 </p>
 
-# AetherLyze: Hybrid Classifier for AI-Generated Image Detection
+# MetaMorph: Hybrid Classifier for AI-Generated Image Detection
 
 **MetaMorph** is a project designed to detect AI-generated images using a hybrid approach combining pixel-level CNN classifiers and file-level forensic features.
 
