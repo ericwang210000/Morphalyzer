@@ -6,6 +6,14 @@
 
 **Morphalyzer** is a project designed to detect AI-generated images using a hybrid approach combining pixel-level CNN classifiers and file-level forensic features.
 
+# Purpose
+
+The accelerated advancement of generative AI models — particularly those capable of synthesizing hyper-realistic imagery — has introduced powerful creative tools, but also serious risks. Models like StyleGAN, Midjourney, and Stable Diffusion can produce facial composites and visual artworks that are indistinguishable from real content to the human eye. These images are frequently constructed using datasets scraped from public web sources, raising concerns of plagiarism, unconsented likeness reproduction, and unauthorized use of artistic style.
+
+With the release of *4o Image Generation* by OpenAI (25 March, 2025), proliferation of such content across social media, marketplaces, and misinformation pipelines has triggered a pressing need for robust detection systems. While many current detectors focus on surface-level visual cues, adversarial improvements in diffusion models and GANs have made purely pixel-based detection brittle. At the same time, artifacts embedded at the file or compression level often remain underutilized, despite their forensic value.
+
+**Morphalyzer** is designed in direct response to this threat landscape — leveraging both pixel-level patterns and file-level forensics in a unified model to combat the growing indistinguishability of synthetic media.
+
 # Project Goals
 
 **Phase 1** focuses on building a binary image classifier using pixel data. The goal is to distinguish between real and AI-generated facial images (e.g., CelebA vs. ThisPersonDoesNotExist). Later phases will incorporate non-pixel features such as metadata and byte-level compression traces. In this phase, pre-processed images will be used to train, validate and test (70/15/15) the model. Training will be done using the Adam optimizer with an inital learning rate of 0.001. This will act as the base architecture. 
