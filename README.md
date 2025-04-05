@@ -20,7 +20,7 @@ With the release of *4o Image Generation* by OpenAI (25 March, 2025), proliferat
 
 **Phase 2** will attempt to fuse CNN-derived feature maps with independent file-level features to improve classification robustness. Features like EXIF/tEXt metadata, entropy, compression artifacts, and byte frequency will be extracted from an image file and encoded into a fixed-length vector. Skip connections will then be used to inject these low level features into intermediate layers and concatenate them with mid-level feature maps. (Mid-layer injection -> DenseNet -> Dual-branch network).
 
-## **Proposed NN Architecture:
+## Proposed NN Architecture:
 <p align="center">
   <img src="assets/CNN.png" alt="Logo" width="300"/>
 </p>
