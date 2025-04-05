@@ -43,7 +43,9 @@ Evaluate the hybrid model’s performance and robustness while interpreting its 
 Package the hybrid detection system into a usable interface or tool for real-world testing, inference, or interactive demos.
 
 # Data Sources & Preprocessing
-This project uses a balanced dataset of 20,000 images, comprising:
+The initial training dataset primarily consists of GAN-generated synthetic images due to availability constraints. Future iterations will incorporate fine-tuning and retraining using diffusion model-based images (GPT-4o).
+
+The first training iteration will use a balanced dataset of 20,000 .jpg images, comprising:
 - 10,000 AI-generated faces from the This Person Does Not Exist (TPDNE) dataset on Kaggle, curated by David Lorenzo.
 - 10,000 real face images from the CelebA dataset (Liu et al., 2015)[^1].
 
@@ -53,4 +55,5 @@ All images were preprocessed as follows:
 - Resized to 128×128 pixels using the Pillow library.
 - No padding was applied; aspect ratios were preserved through center-cropping when needed, followed by resizing.
 - Images were loaded and converted to RGB format to ensure consistency across both domains.
+
 
