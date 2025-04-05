@@ -1,6 +1,6 @@
 import torch
 
-def train_model(model, train_loader, val_loader, epochs, loss_compute, optimizer, device):
+def train_model(model, train_loader, val_loader, epochs, loss_fn, optimizer, device):
     """
     Train the model with the given parameters.
     
@@ -29,7 +29,7 @@ def train_model(model, train_loader, val_loader, epochs, loss_compute, optimizer
             # forward pass
             logits = model(images)
             # compute loss
-            loss = loss_compute(logits, targets)
+            loss = loss_fn(logits, targets)
             # zero gradients
             optimizer.zero_grad()
             # backward pass
