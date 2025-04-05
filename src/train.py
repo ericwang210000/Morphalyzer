@@ -2,9 +2,7 @@ import torch
 
 def train_model(model, train_loader, val_loader, epochs, loss_fn, optimizer, device):
     """
-    Train the model with the given parameters.
-    
-    Args:
+    params:
         model (torch.nn.Module): The model to train.
         train_loader (torch.utils.data.DataLoader): DataLoader for training data.
         val_loader (torch.utils.data.DataLoader): DataLoader for validation data.
@@ -12,9 +10,6 @@ def train_model(model, train_loader, val_loader, epochs, loss_fn, optimizer, dev
         loss_compute (callable): Loss computation function.
         optimizer (torch.optim.Optimizer): Optimizer for training.
         device (torch.device): Device to perform training on.
-        
-    Returns:
-        None
     """
     model = model.to(device)
     
