@@ -6,6 +6,11 @@
 
 **Morphalyzer** is a project designed to detect AI-generated images using a hybrid approach combining pixel-level CNN classifiers and file-level forensic features.
 
+## Proposed NN Architecture:
+<p align="center">
+  <img src="assets/CNN.png" alt="Logo" width="300"/>
+</p>
+
 # Purpose
 
 The accelerated advancement of generative AI models — particularly those capable of synthesizing hyper-realistic imagery — has introduced powerful creative tools, but also serious risks. Models like StyleGAN, Midjourney, and Stable Diffusion can produce facial composites and visual artworks that are indistinguishable from real content to the human eye. These images are frequently constructed using datasets scraped from public web sources, raising concerns of plagiarism, unconsented likeness reproduction, and unauthorized use of artistic style.
@@ -21,11 +26,6 @@ With the release of *4o Image Generation* by OpenAI (25 March, 2025), proliferat
 **Phase 2** will attempt to fuse CNN-derived feature maps with independent file-level features to improve classification robustness. Features like EXIF/tEXt metadata, entropy, compression artifacts, and byte frequency will be extracted from an image file and encoded into a fixed-length vector. Skip connections will then be used to inject these low level features into intermediate layers and concatenate them with mid-level feature maps. (Mid-layer injection -> DenseNet -> Dual-branch network).
 
 **Phase 3 and 4** will interpret and validate the model's performance across multiple real-world conditions. Demo deployment for public use may be a good way to do so. Evaluation methods are tentative.
-
-## Proposed NN Architecture (1):
-<p align="center">
-  <img src="assets/CNN.png" alt="Logo" width="300"/>
-</p>
 
 ## Project Development Summary
 
@@ -57,7 +57,7 @@ All images were preprocessed as follows:
 - Images were loaded and converted to RGB format to ensure consistency across both domains.
 
 # Results
-Test Results (images sourced from same data set as training): 
-Loss: 0.0344, Accuracy: 0.9883, AUC: 0.9884
-OOD Results (new, unseen auto-regressive generated images ): 
+Test Results (images sourced from same data set as training):   
+Loss: 0.0344, Accuracy: 0.9883, AUC: 0.9884  
+OOD Results (new, unseen auto-regressive generated images ):   
 Loss: 0.0866, Accuracy: 0.9818, AUC: nan
