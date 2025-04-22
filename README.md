@@ -57,7 +57,7 @@ All images were preprocessed as follows:
 - Images were loaded and converted to RGB format to ensure consistency across both domains.
 
 # Results
-Test Results (images sourced from same data set as training):   
+**Test Results** (images sourced from same data set as training):   
 Loss: 0.0344, Accuracy: 0.9883, AUC: 0.9884  
-OOD Results (new, unseen auto-regressive generated images ):   
+**OOD Results** (new, unseen auto-regressive generated images ):   
 Loss: 0.0866, Accuracy: 0.9818, AUC: nan
