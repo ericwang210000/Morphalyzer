@@ -47,6 +47,7 @@ The initial training dataset primarily consists of GAN-generated synthetic image
 The first training iteration will use a balanced dataset of 20,000 .jpg images, comprising:
 - 10,000 AI-generated faces from the This Person Does Not Exist (TPDNE) dataset on Kaggle, curated by David Lorenzo.
 - 10,000 real face images from the CelebA dataset (Liu et al., 2015)[^1].
+- Variable set of DALL-E 3 images generated through OpenAI's API platform (size depends on availibilty)
 
 [^1]: Liu, Z., Luo, P., Wang, X., & Tang, X. (2015). Deep Learning Face Attributes in the Wild. In Proceedings of the IEEE International Conference on Computer Vision (ICCV), 3730–3738.
 
@@ -55,4 +56,8 @@ All images were preprocessed as follows:
 - No padding was applied; aspect ratios were preserved through center-cropping when needed, followed by resizing.
 - Images were loaded and converted to RGB format to ensure consistency across both domains.
 
-
+# Results
+Test Results (images sourced from same data set as training): 
+Loss: 0.0344, Accuracy: 0.9883, AUC: 0.9884
+OOD Results (new, unseen auto-regressive generated images ): 
+Loss: 0.0866, Accuracy: 0.9818, AUC: nan
