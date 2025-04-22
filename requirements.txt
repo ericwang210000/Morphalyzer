@@ -5,7 +5,5 @@ matplotlib
 scikit-learn
 pillow
 
-diffusers
-transformers
-accelerate
-safetensors
+openai
+python-dotenv

@@ -13,6 +13,10 @@ def eval(model, dataloader, loss_fn, device, is_binary=True):
             images, targets = images.to(device), targets.to(device).float()
             outputs = model(images).squeeze()
 
+            # Ensure outputs and targets have the same shape
+            if outputs.dim() == 0:  # If outputs is a scalar, unsqueeze it
+                outputs = outputs.unsqueeze(0)
+
             if is_binary:
                 preds = (outputs > 0.5).float()
             else:
